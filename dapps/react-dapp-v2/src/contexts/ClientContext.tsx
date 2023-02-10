@@ -358,6 +358,8 @@ export function ClientContextProvider({
       const _pushClient = await PushDappClient.init({
         core,
         metadata: DEFAULT_APP_METADATA,
+        castUrl: "https://staging.cast.walletconnect.com",
+        logger: "debug",
       });
       console.log("CREATED PUSH CLIENT:", _pushClient);
       setPushClient(_pushClient);
